@@ -11,12 +11,5 @@ MENUS = {
 
 def poor_calories_counter(burger, side, beverage)
   # TODO: return number of calories for this restaurant order
-  menu = [burger, side, beverage]
-  cal = 0
-
-  MENUS.each do |element, cal_element|
-    menu.each { |ingredient| cal += cal_element if element == ingredient }
-  end
-
-  return cal
+  MENUS[burger] + MENUS[side] + MENUS[beverage]
 end
